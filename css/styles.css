@@ -594,6 +594,7 @@ h1 {
 }
 .box-slide {
   position: relative;
+  overflow:hidden;
 }
 .box-overlay {
   position: absolute;
