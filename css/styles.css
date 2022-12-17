@@ -649,20 +649,25 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.25);
   width: 528px;
   min-height: 581px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  animation: scale125 1000ms 1 1000ms;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
 }
+
 .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
+}
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.2);
 }
 .close-btn {
   position: absolute;
@@ -681,9 +686,9 @@ h1 {
 }
 @keyframes scale125 {
   0% {
-    transform: scale(1)
+    transform: scale(1) transform(-50%, -50%);
   }
   100% {
-    transform: scale(1.25)
+    transform: scale(1.25) transform(-50%, -50%);
   }
 }
