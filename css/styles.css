@@ -255,6 +255,9 @@ h1 {
 .solutions button:active {
   cursor: pointer;
 }
+
+/* -------------------- WHAT WE DO -------------------- */
+
 .offer-main {
   font-weight: 700;
   font-size: 36px;
@@ -273,8 +276,36 @@ h1 {
   padding: 25px 15px 0px 15px;
   gap: 30px;
 }
+.offer-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.offer-box p {
+  position: absolute;
+  bottom: 0;
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  background: rgba(47, 48, 58, 0.8);
+  z-index: 1;
+  overflow: hidden;
+}
+.offer-box:nth-child(1) p {
+  padding: 27px 90px 27px 90px;
+}
+.offer-box:nth-child(2) p {
+  padding: 27px 112px 27px 112px;
+}
+.offer-box:nth-child(3) p {
+  padding: 27px 94px 27px 94px;
+}
 
-/* LOREM */
+/* ---------------------------LOREM----------------------------- */
 
 .lorem-showcase {
   display: flex;
@@ -391,7 +422,7 @@ h1 {
   column-gap: 30px;
 }
 
-/* Portfolio Boxes */
+/* ---------------------------Portfolio Boxes-------------------------- */
 
 .box-portfolio {
   width: 370px;
@@ -466,7 +497,7 @@ h1 {
   font-family: Raleway;
 }
 
-/* Customers */
+/* ----------------------Customers------------------------ */
 
 .container-customers h2 {
   font-weight: 700;
@@ -509,7 +540,7 @@ h1 {
   transition-duration: 250ms;
 }
 
-/* Footer icons */
+/* ----------------------Footer icons----------------------- */
 
 .footer-icons h3 {
   font-style: normal;
@@ -549,33 +580,6 @@ h1 {
 .footer_icon:active svg {
   --color1: var(--white-color);
 }
-.offer-box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-.offer-box p {
-  position: absolute;
-  bottom: 0;
-  color: #eee;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  text-align: center;
-  background: rgba(47, 48, 58, 0.8);
-  z-index: 1;
-}
-.offer-box:nth-child(1) p {
-  padding: 27px 90px 27px 90px;
-}
-.offer-box:nth-child(2) p {
-  padding: 27px 112px 27px 112px;
-}
-.offer-box:nth-child(3) p {
-  padding: 27px 94px 27px 94px;
-}
 .active-link {
   position: relative;
   color: var(--brand-color);
@@ -592,9 +596,12 @@ h1 {
   width: 100%;
   height: 4px;
 }
+
+/* ---------------PORTFOLIO SLIDE DESCRIPTION------------------ */
+
 .box-slide {
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 }
 .box-overlay {
   position: absolute;
@@ -620,10 +627,63 @@ h1 {
   transform: translateY(0);
   opacity: 1;
   z-index: 1;
- 
 }
 .box-slide figcaption {
   position: relative;
   z-index: 3;
   background-color: var(--white-color);
+}
+
+/*-------------- MODAL--------------- */
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  animation: scale125 1000ms 1 1000ms;
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+}
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background-color: var(--icon-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes scale125 {
+  0% {
+    transform: scale(1)
+  }
+  100% {
+    transform: scale(1.25)
+  }
 }
