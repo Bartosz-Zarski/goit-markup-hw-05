@@ -650,7 +650,6 @@ h1 {
 }
 .modal {
   position: relative;
-  transform: scale(1.25);
   width: 528px;
   min-height: 581px;
   background-color: var(--white-color);
